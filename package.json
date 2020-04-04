@@ -1,0 +1,29 @@
+{
+  "name": "laba1",
+  "version": "1.0.0",
+  "scripts": {
+    "start:api": "npx cross-env NAME=Yakov777 NODE_ENV=api node api/app.js",
+    "start:proxy": "npx cross-env NODE_ENV=proxy node proxy/app.js",
+    "start:proxy-docker": "cross-env API_URL=http://api:3000 NODE_ENV=proxy node proxy/app.js",
+    "test": "npx cross-env NODE_ENV=test jest"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "convict": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jest": "^25.2.7",  
+    "supertest": "^4.0.2",
+    "nock": "^12.0.3"
+  },
+  "devDependencies": {
+    
+  }
+}
